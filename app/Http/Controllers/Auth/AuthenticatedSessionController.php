@@ -31,7 +31,8 @@ class AuthenticatedSessionController extends Controller
 
 
         $url = '';
-        //condition statement is to chect the role of the user's credentials entered and send them to thier respective dashboard
+        // Condition statement to check the role of the user's credentials entered and send them to their respective dashboard
+
         if ($request->user()->role === 'admin') {
             $url = 'admin/dashboard';
             // return redirect()->intended(RouteServiceProvider::ADMIN_HOME);

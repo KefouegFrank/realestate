@@ -34,6 +34,7 @@ require __DIR__ . '/auth.php';
 
 
 //route to admin dashboard. the middleware protect code id fount in the app/http/middleware/Role file
+
 Route::middleware(['auth', 'role:admin'])->group(function () {
 
     Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');

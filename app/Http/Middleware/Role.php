@@ -16,7 +16,7 @@ class Role
     public function handle(Request $request, Closure $next, $role): Response
     {
         //condition to protect the route. Then called in route/web.php file
-        if ($request->user()->$role !== $role) {
+        if ($request->user()->role !== $role) {
             return redirect('dashboard');
         }
 
